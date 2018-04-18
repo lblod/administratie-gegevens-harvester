@@ -114,11 +114,10 @@ def clean_site(site)
 end
 
 gemeente_to_eenheid = Hash[CSV.read("map.csv", headers: true).map{|row| [row["label"], row["eenheid"]]}]
-gemeente_nis_code = ARGV[0]
 
-
-xml = Nokogiri::XML(open("http://mandatenbeheer-publicatie.vlaanderen.be/mdbPublication/data/MDB100/MDB100_GE_%{gemeente}.xml" % {gemeente: gemeente_nis_code}))
-
+type = ARGV[0]
+gemeente_nis_code = ARGV[1]
+xml = Nokogiri::XML(open("http://mandatenbeheer-publicatie.vlaanderen.be/mdbPublication/data/MDB100/MDB100_%{type}_%{gemeente}.xml" % {gemeente: gemeente_nis_code, type: type}))
 contact_point = create_contactpoint(locality: xml.xpath('/AllocationHistory/Council/CouncilCity/text()'),
                                     postalCode: xml.xpath('/AllocationHistory/Council/CouncilPostCode/text()'),
                                     address: xml.xpath('/AllocationHistory/Council/CouncilAddress/text()'),
@@ -126,8 +125,10 @@ contact_point = create_contactpoint(locality: xml.xpath('/AllocationHistory/Coun
                                     telephone: RDF::URI("tel:#{clean_phone(xml.xpath('/AllocationHistory/Council/CouncilTelephone/text()'))}"),
                                     fax: RDF::URI("tel:#{clean_phone(xml.xpath('/AllocationHistory/Council/CouncilFax/text()'))}"),
                                     website: RDF::URI("#{clean_site(xml.xpath('/AllocationHistory/Council/CouncilWebsiteUrl/text()'))}")
-                                  )
+                                   )
 vestiging = create_vestiging(contact_point.first.subject)
+
+if type == "GE"
 contact_police = create_contactpoint(locality: xml.xpath('/AllocationHistory/Council/PoliceZoneCity/text()'),
                                      postalCode: xml.xpath('/AllocationHistory/Council/PoliceZonePostCode/text()'),
                                      address: xml.xpath('/AllocationHistory/Council/PoliceZoneAddress/text()')
@@ -145,28 +146,32 @@ adjunct_secretaris_gemeente = create_position(adjunct_secretary.first.subject, a
 financieel_beheerder_gemeente = create_position(financial_manager.first.subject, financieel_beheerder)
 informatie_ambtenaar_gemeente = create_position(information_officer.first.subject, informatie_ambtenaar)
 zonechef_gemeente = create_position(police_zone_chief.first.subject, zonechef)
+end
+
 gemeente_naam = xml.xpath('/AllocationHistory/Council/GeoUnit/text()').to_s
 gemeente = RDF::URI(gemeente_to_eenheid[gemeente_naam])
-RDF::Writer.open("#{DateTime.now.strftime("%Y%m%d%H%M%S")}-administratieve-gegevens-#{gemeente_naam}-#{gemeente_nis_code}.ttl") do |writer|
+RDF::Writer.open("#{DateTime.now.strftime("%Y%m%d%H%M%S")}-administratieve-gegevens-#{type}-#{gemeente_naam}-#{gemeente_nis_code}.ttl") do |writer|
   writer << contact_point
   writer << vestiging
-  writer << contact_police
-  writer << politiezone
-  writer << secretary
-  writer << adjunct_secretary
-  writer << financial_manager
-  writer << information_officer
-  writer << police_zone_chief
-  writer << secretaris_gemeente
-  writer << adjunct_secretaris_gemeente
-  writer << financieel_beheerder_gemeente
-  writer << informatie_ambtenaar_gemeente
-  writer << zonechef_gemeente
-  writer << RDF.Statement(gemeente, ORG.hasPost, secretaris_gemeente.first.subject)
-  writer << RDF.Statement(gemeente, ORG.hasPost, adjunct_secretaris_gemeente.first.subject)
-  writer << RDF.Statement(gemeente, ORG.hasPost, financieel_beheerder_gemeente.first.subject)
-  writer << RDF.Statement(gemeente, ORG.hasPost, informatie_ambtenaar_gemeente.first.subject)
-  writer << RDF.Statement(gemeente, ORG.hasPrimarySite, vestiging.first.subject)
-  writer << RDF.Statement(gemeente, ORG.linkedTo, politiezone.first.subject)
-  writer << RDF.Statement(politiezone.first.subject, ORG.hasPost, zonechef_gemeente.first.subject)
+  if type == "GE"
+      writer << contact_police
+      writer << politiezone
+      writer << secretary
+      writer << adjunct_secretary
+      writer << financial_manager
+      writer << information_officer
+      writer << police_zone_chief
+      writer << secretaris_gemeente
+      writer << adjunct_secretaris_gemeente
+      writer << financieel_beheerder_gemeente
+      writer << informatie_ambtenaar_gemeente
+      writer << zonechef_gemeente
+      writer << RDF.Statement(gemeente, ORG.hasPrimarySite, vestiging.first.subject)
+      writer << RDF.Statement(gemeente, ORG.hasPost, secretaris_gemeente.first.subject)
+      writer << RDF.Statement(gemeente, ORG.hasPost, adjunct_secretaris_gemeente.first.subject)
+      writer << RDF.Statement(gemeente, ORG.hasPost, financieel_beheerder_gemeente.first.subject)
+      writer << RDF.Statement(gemeente, ORG.hasPost, informatie_ambtenaar_gemeente.first.subject)
+      writer << RDF.Statement(gemeente, ORG.linkedTo, politiezone.first.subject)
+      writer << RDF.Statement(politiezone.first.subject, ORG.hasPost, zonechef_gemeente.first.subject)
+  end
 end
