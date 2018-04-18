@@ -1,2 +1,2 @@
 # Administratieve gegevens harvester
-usage: `ruby administratieve-gegevens.rb [niscode]`
+usage: `ruby administratieve-gegevens.rb`

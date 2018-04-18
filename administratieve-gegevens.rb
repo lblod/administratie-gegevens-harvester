@@ -85,12 +85,6 @@ def create_person(voornaam, achternaam)
   graph << RDF.Statement(subject, PERSOON.gebruikteVoornaam, voornaam)
 end
 
-secretaris = RDF::URI("http://data.lblod.info/id/concept/bestuurseenheidRollen/66b95587-b24b-46a5-9231-b4dec06bddac")
-adjunct_secretaris = RDF::URI("http://data.lblod.info/id/concept/bestuurseenheidRollen/8235802f-37fd-4971-826c-063205a1a31c")
-financieel_beheerder = RDF::URI("http://data.lblod.info/id/concept/bestuurseenheidRollen/b83a1d0e-0390-4759-871a-e99c9ec00490")
-informatie_ambtenaar = RDF::URI("http://data.lblod.info/id/concept/bestuurseenheidRollen/f5a7bf88-f31b-4ea8-926b-233b4952fe13")
-zonechef = RDF::URI("http://data.lblod.info/id/concept/bestuurseenheidRollen/a2e91f2b-6353-4042-ba8c-71d0015ea1d1")
-
 def create_person_from_concat_string(string)
   parts = string.to_s.split(' ')
   firstName = parts[0] || ""
@@ -113,12 +107,15 @@ def clean_site(site)
   site
 end
 
-gemeente_to_eenheid = Hash[CSV.read("map.csv", headers: true).map{|row| [row["label"], row["eenheid"]]}]
+def build_and_write_rdf(gemeente_to_eenheid, gemeente_nis_code, type)
+  secretaris = RDF::URI("http://data.lblod.info/id/concept/bestuurseenheidRollen/66b95587-b24b-46a5-9231-b4dec06bddac")
+  adjunct_secretaris = RDF::URI("http://data.lblod.info/id/concept/bestuurseenheidRollen/8235802f-37fd-4971-826c-063205a1a31c")
+  financieel_beheerder = RDF::URI("http://data.lblod.info/id/concept/bestuurseenheidRollen/b83a1d0e-0390-4759-871a-e99c9ec00490")
+  informatie_ambtenaar = RDF::URI("http://data.lblod.info/id/concept/bestuurseenheidRollen/f5a7bf88-f31b-4ea8-926b-233b4952fe13")
+  zonechef = RDF::URI("http://data.lblod.info/id/concept/bestuurseenheidRollen/a2e91f2b-6353-4042-ba8c-71d0015ea1d1")
 
-type = ARGV[0]
-gemeente_nis_code = ARGV[1]
-xml = Nokogiri::XML(open("http://mandatenbeheer-publicatie.vlaanderen.be/mdbPublication/data/MDB100/MDB100_%{type}_%{gemeente}.xml" % {gemeente: gemeente_nis_code, type: type}))
-contact_point = create_contactpoint(locality: xml.xpath('/AllocationHistory/Council/CouncilCity/text()'),
+  xml = Nokogiri::XML(open("http://mandatenbeheer-publicatie.vlaanderen.be/mdbPublication/data/MDB100/MDB100_%{type}_%{gemeente}.xml" % {gemeente: gemeente_nis_code, type: type}))
+  contact_point = create_contactpoint(locality: xml.xpath('/AllocationHistory/Council/CouncilCity/text()'),
                                     postalCode: xml.xpath('/AllocationHistory/Council/CouncilPostCode/text()'),
                                     address: xml.xpath('/AllocationHistory/Council/CouncilAddress/text()'),
                                     email: RDF::URI("mailto:#{xml.xpath('/AllocationHistory/Council/CouncilEmail/text()')}"),
@@ -126,34 +123,35 @@ contact_point = create_contactpoint(locality: xml.xpath('/AllocationHistory/Coun
                                     fax: RDF::URI("tel:#{clean_phone(xml.xpath('/AllocationHistory/Council/CouncilFax/text()'))}"),
                                     website: RDF::URI("#{clean_site(xml.xpath('/AllocationHistory/Council/CouncilWebsiteUrl/text()'))}")
                                    )
-vestiging = create_vestiging(contact_point.first.subject)
+  vestiging = create_vestiging(contact_point.first.subject)
 
-if type == "GE"
-contact_police = create_contactpoint(locality: xml.xpath('/AllocationHistory/Council/PoliceZoneCity/text()'),
+  if type == "GE"
+    contact_police = create_contactpoint(locality: xml.xpath('/AllocationHistory/Council/PoliceZoneCity/text()'),
                                      postalCode: xml.xpath('/AllocationHistory/Council/PoliceZonePostCode/text()'),
                                      address: xml.xpath('/AllocationHistory/Council/PoliceZoneAddress/text()')
                                     )
-politiezone = create_politiezone(xml.xpath('/AllocationHistory/Council/PoliceZoneName/text()'), contact_police.first.subject)
+    politiezone = create_politiezone(xml.xpath('/AllocationHistory/Council/PoliceZoneName/text()'), contact_police.first.subject)
 
-secretary = create_person_from_concat_string(xml.xpath('/AllocationHistory/Council/CouncilSecretary/text()'))
-adjunct_secretary = create_person_from_concat_string(xml.xpath('/AllocationHistory/Council/CouncilAdjunctSecretary/text()'))
-financial_manager = create_person_from_concat_string(xml.xpath('/AllocationHistory/Council/CouncilFinancialManager/text()'))
-information_officer = create_person_from_concat_string(xml.xpath('/AllocationHistory/Council/ConcilInformationManager/text()'))
-police_zone_chief = create_person_from_concat_string(xml.xpath('/AllocationHistory/Council/PoliceZoneChiefname/text()'))
+    secretary = create_person_from_concat_string(xml.xpath('/AllocationHistory/Council/CouncilSecretary/text()'))
+    adjunct_secretary = create_person_from_concat_string(xml.xpath('/AllocationHistory/Council/CouncilAdjunctSecretary/text()'))
+    financial_manager = create_person_from_concat_string(xml.xpath('/AllocationHistory/Council/CouncilFinancialManager/text()'))
+    information_officer = create_person_from_concat_string(xml.xpath('/AllocationHistory/Council/ConcilInformationManager/text()'))
+    police_zone_chief = create_person_from_concat_string(xml.xpath('/AllocationHistory/Council/PoliceZoneChiefname/text()'))
 
-secretaris_gemeente = create_position(secretary.first.subject, secretaris)
-adjunct_secretaris_gemeente = create_position(adjunct_secretary.first.subject, adjunct_secretaris)
-financieel_beheerder_gemeente = create_position(financial_manager.first.subject, financieel_beheerder)
-informatie_ambtenaar_gemeente = create_position(information_officer.first.subject, informatie_ambtenaar)
-zonechef_gemeente = create_position(police_zone_chief.first.subject, zonechef)
-end
+    secretaris_gemeente = create_position(secretary.first.subject, secretaris)
+    adjunct_secretaris_gemeente = create_position(adjunct_secretary.first.subject, adjunct_secretaris)
+    financieel_beheerder_gemeente = create_position(financial_manager.first.subject, financieel_beheerder)
+    informatie_ambtenaar_gemeente = create_position(information_officer.first.subject, informatie_ambtenaar)
+    zonechef_gemeente = create_position(police_zone_chief.first.subject, zonechef)
+  end
 
-gemeente_naam = xml.xpath('/AllocationHistory/Council/GeoUnit/text()').to_s
-gemeente = RDF::URI(gemeente_to_eenheid[gemeente_naam])
-RDF::Writer.open("#{DateTime.now.strftime("%Y%m%d%H%M%S")}-administratieve-gegevens-#{type}-#{gemeente_naam}-#{gemeente_nis_code}.ttl") do |writer|
-  writer << contact_point
-  writer << vestiging
-  if type == "GE"
+  gemeente_naam = xml.xpath('/AllocationHistory/Council/GeoUnit/text()').to_s
+  gemeente = RDF::URI(gemeente_to_eenheid[gemeente_naam])
+  RDF::Writer.open("#{DateTime.now.strftime("%Y%m%d%H%M%S")}-administratieve-gegevens-#{type}-#{gemeente_naam}-#{gemeente_nis_code}.ttl") do |writer|
+    writer << contact_point
+    writer << vestiging
+    writer << RDF.Statement(gemeente, ORG.hasPrimarySite, vestiging.first.subject)
+    if type == "GE"
       writer << contact_police
       writer << politiezone
       writer << secretary
@@ -166,12 +164,36 @@ RDF::Writer.open("#{DateTime.now.strftime("%Y%m%d%H%M%S")}-administratieve-gegev
       writer << financieel_beheerder_gemeente
       writer << informatie_ambtenaar_gemeente
       writer << zonechef_gemeente
-      writer << RDF.Statement(gemeente, ORG.hasPrimarySite, vestiging.first.subject)
       writer << RDF.Statement(gemeente, ORG.hasPost, secretaris_gemeente.first.subject)
       writer << RDF.Statement(gemeente, ORG.hasPost, adjunct_secretaris_gemeente.first.subject)
       writer << RDF.Statement(gemeente, ORG.hasPost, financieel_beheerder_gemeente.first.subject)
       writer << RDF.Statement(gemeente, ORG.hasPost, informatie_ambtenaar_gemeente.first.subject)
       writer << RDF.Statement(gemeente, ORG.linkedTo, politiezone.first.subject)
       writer << RDF.Statement(politiezone.first.subject, ORG.hasPost, zonechef_gemeente.first.subject)
+    end
+  end
+end
+
+[ {
+    type: 'OC',
+    file: "gemeenten.csv"
+  },
+  {
+    type: 'GE',
+    file: "gemeenten.csv"
+  },
+  {
+    type: 'DI',
+    file: "districten.csv"
+  },
+  {
+    type: 'PR',
+    file: "provincies.csv"
+  }
+].each do |config|
+  gemeenten = CSV.read(config[:file]).map{ |row| row[1] }
+  gemeente_to_eenheid = Hash[CSV.read("map-#{config[:type]}.csv", headers: true).map{|row| [row["label"], row["eenheid"]]}]
+  gemeenten.each do |nis_code|
+    build_and_write_rdf(gemeente_to_eenheid, nis_code, config[:type] )
   end
 end
