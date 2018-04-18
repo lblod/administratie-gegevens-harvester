@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type='text/xsl' href='mdb100.xsl' ?>
+<AllocationHistory>
+   <SnapshotDate>20140613</SnapshotDate>
+   <Council type="GE" id="1006">
+      <Name>Gemeenteraad Huldenberg</Name>
+      <GeoUnit niscode="24045">Huldenberg</GeoUnit>
+      <NumberOfMembers>21</NumberOfMembers>
+      <NumberOfCouncillors>5</NumberOfCouncillors>
+      <CouncilAddress>Gemeenteplein 1</CouncilAddress>
+      <CouncilPostCode>3040</CouncilPostCode>
+      <CouncilCity>Huldenberg</CouncilCity>
+      <CouncilEmail>info@huldenberg.be</CouncilEmail>
+      <CouncilTelephone>02 687 70 07</CouncilTelephone>
+      <CouncilFax>02 686 61 76</CouncilFax>
+      <CouncilWebsiteUrl />
+      <CouncilSecretary>Caroline Peters</CouncilSecretary>
+      <CouncilAdjunctSecretary />
+      <CouncilFinancialManager>Hilde De Keyser</CouncilFinancialManager>
+      <CouncilInformationOfficer />
+      <PoliceZoneName>Politiezone Dijleland</PoliceZoneName>
+      <PoliceZoneChiefname>Jan Daems</PoliceZoneChiefname>
+      <PoliceZoneAddress>Oude Nethensebaan 15</PoliceZoneAddress>
+      <PoliceZonePostCode>3051</PoliceZonePostCode>
+      <PoliceZoneCity>Oud-Heverlee</PoliceZoneCity>
+      <Persons>
+         <Person id="23795">
+            <Name>
+               <FirstName>Noël Henri</FirstName>
+               <LastName>De Clerck</LastName>
+            </Name>
+            <KnownAs>
+               <FirstName>Noël Henri</FirstName>
+               <LastName>De Clerck</LastName>
+            </KnownAs>
+            <Gender>M</Gender>
+            <DateOfBirth>19491122</DateOfBirth>
+            <Fraction>Open Vld</Fraction>
+            <Affiliation>Open Vld</Affiliation>
+            <Address>LEUVENSEBAAN(SAR), 223, 3040 Huldenberg</Address>
+            <Results>
+               <Elected>yes</Elected>
+               <Ranking>5</Ranking>
+            </Results>
+            <FunctionAllocations>
+               <FunctionAllocation id="56022">
+                  <Function id="1" displayPriority="1" bevoegdheidOrFunction="FUNCTION">Gemeenteraadslid</Function>
+                  <Since>20130111</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+            </FunctionAllocations>
+         </Person>
+         <Person id="23849">
+            <Name>
+               <FirstName>Violeta</FirstName>
+               <LastName>Vitélis</LastName>
+            </Name>
+            <KnownAs>
+               <FirstName>Violeta</FirstName>
+               <LastName>Vitélis</LastName>
+            </KnownAs>
+            <Gender>F</Gender>
+            <DateOfBirth>19620227</DateOfBirth>
+            <Fraction>Groen</Fraction>
+            <Affiliation>Groen</Affiliation>
+            <Address>ST.-ROCHUSSTRAAT, 11, 3040 Huldenberg</Address>
+            <Results>
+               <Elected>yes</Elected>
+               <Ranking>3</Ranking>
+            </Results>
+            <FunctionAllocations>
+               <FunctionAllocation id="56006">
+                  <Function id="1" displayPriority="1" bevoegdheidOrFunction="FUNCTION">Gemeenteraadslid</Function>
+                  <Since>20130111</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+            </FunctionAllocations>
+         </Person>
+         <Person id="23868">
+            <Name>
+               <FirstName>Marc Marcel</FirstName>
+               <LastName>Verheyden</LastName>
+            </Name>
+            <KnownAs>
+               <FirstName>Marc Marcel</FirstName>
+               <LastName>Verheyden</LastName>
+            </KnownAs>
+            <Gender>M</Gender>
+            <DateOfBirth>19570617</DateOfBirth>
+            <Fraction>CD&amp;V</Fraction>
+            <Affiliation>CD&amp;V</Affiliation>
+            <Address>LEUVENSEBAAN(SAR), 346, 3040 Huldenberg</Address>
+            <Results>
+               <Elected>yes</Elected>
+               <Ranking>1</Ranking>
+            </Results>
+            <FunctionAllocations>
+               <FunctionAllocation id="56016">
+                  <Function id="1" displayPriority="1" bevoegdheidOrFunction="FUNCTION">Gemeenteraadslid</Function>
+                  <Since>20130111</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+               <FunctionAllocation id="56068">
+                  <Function id="3" displayPriority="3" bevoegdheidOrFunction="FUNCTION">Schepen</Function>
+                  <Since>20130111</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+            </FunctionAllocations>
+            <Bevoegdheden>
+               <Bevoegdheid id="71">Cultuur</Bevoegdheid>
+               <Bevoegdheid id="73">Eerste schepen</Bevoegdheid>
+               <Bevoegdheid id="103">Onderwijs</Bevoegdheid>
+               <Bevoegdheid id="573">Bibliotheken</Bevoegdheid>
+               <Bevoegdheid id="93">Kinderopvang</Bevoegdheid>
+            </Bevoegdheden>
+         </Person>
+         <Person id="23873">
+            <Name>
+               <FirstName>Herman Jozef</FirstName>
+               <LastName>Depré</LastName>
+            </Name>
+            <KnownAs>
+               <FirstName>Herman Jozef</FirstName>
+               <LastName>Depré</LastName>
+            </KnownAs>
+            <Gender>M</Gender>
+            <DateOfBirth>19620415</DateOfBirth>
+            <Fraction>CD&amp;V</Fraction>
+            <Affiliation>CD&amp;V</Affiliation>
+            <Address>WOLFSHAEGEN, 24/A000, 3040 Huldenberg</Address>
+            <Results>
+               <Elected>yes</Elected>
+               <Ranking>3</Ranking>
+            </Results>
+            <FunctionAllocations>
+               <FunctionAllocation id="56066">
+                  <Function id="20" displayPriority="6" bevoegdheidOrFunction="FUNCTION">Ocmw-voorzitter</Function>
+                  <Since>20131104</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+               <FunctionAllocation id="86058">
+                  <Function id="3" displayPriority="3" bevoegdheidOrFunction="FUNCTION">Schepen</Function>
+                  <Since>20130111</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+               <FunctionAllocation id="56013">
+                  <Function id="1" displayPriority="1" bevoegdheidOrFunction="FUNCTION">Gemeenteraadslid</Function>
+                  <Since>20130111</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+            </FunctionAllocations>
+            <Bevoegdheden>
+               <Bevoegdheid id="483">Sociale zaken</Bevoegdheid>
+               <Bevoegdheid id="513">Senioren</Bevoegdheid>
+               <Bevoegdheid id="593">Sociale huisvesting</Bevoegdheid>
+            </Bevoegdheden>
+         </Person>
+         <Person id="23852">
+            <Name>
+               <FirstName>Martin Cyriel</FirstName>
+               <LastName>Van Kerrebroeck</LastName>
+            </Name>
+            <KnownAs>
+               <FirstName>Martin Cyriel</FirstName>
+               <LastName>Van Kerrebroeck</LastName>
+            </KnownAs>
+            <Gender>M</Gender>
+            <DateOfBirth>19580120</DateOfBirth>
+            <Fraction>Groen</Fraction>
+            <Affiliation>Groen</Affiliation>
+            <Address>J.VAN DER VORSTLAAN(LOO), 42, 3040 Huldenberg</Address>
+            <Results>
+               <Elected>no</Elected>
+               <Ranking>1</Ranking>
+            </Results>
+            <FunctionAllocations>
+               <FunctionAllocation id="56062">
+                  <Function id="1" displayPriority="1" bevoegdheidOrFunction="FUNCTION">Gemeenteraadslid</Function>
+                  <Since>20130111</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+            </FunctionAllocations>
+         </Person>
+         <Person id="23797">
+            <Name>
+               <FirstName>Sofie</FirstName>
+               <LastName>Verhoeven</LastName>
+            </Name>
+            <KnownAs>
+               <FirstName>Sofie</FirstName>
+               <LastName>Verhoeven</LastName>
+            </KnownAs>
+            <Gender>F</Gender>
+            <DateOfBirth>19800606</DateOfBirth>
+            <Fraction>Open Vld</Fraction>
+            <Affiliation>Open Vld</Affiliation>
+            <Address>J.VAN DER VORSTLAAN(LOO), 41/A000, 3040 Huldenberg</Address>
+            <Results>
+               <Elected>no</Elected>
+               <Ranking>1</Ranking>
+            </Results>
+            <FunctionAllocations>
+               <FunctionAllocation id="119148">
+                  <Function id="1" displayPriority="1" bevoegdheidOrFunction="FUNCTION">Gemeenteraadslid</Function>
+                  <Since>20131104</Since>
+                  <StartDate>20131024</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+            </FunctionAllocations>
+         </Person>
+         <Person id="23829">
+            <Name>
+               <FirstName>Gerda Maria</FirstName>
+               <LastName>Vandenplas</LastName>
+            </Name>
+            <KnownAs>
+               <FirstName>Gerda Maria</FirstName>
+               <LastName>Vandenplas</LastName>
+            </KnownAs>
+            <Gender>F</Gender>
+            <DateOfBirth>19640908</DateOfBirth>
+            <Fraction>sp.a</Fraction>
+            <Affiliation>sp.a</Affiliation>
+            <Address>BORHEIDESTRAAT(OTT), 17, 3040 Huldenberg</Address>
+            <Results>
+               <Elected>yes</Elected>
+               <Ranking>1</Ranking>
+            </Results>
+            <FunctionAllocations>
+               <FunctionAllocation id="56009">
+                  <Function id="1" displayPriority="1" bevoegdheidOrFunction="FUNCTION">Gemeenteraadslid</Function>
+                  <Since>20130111</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+            </FunctionAllocations>
+         </Person>
+         <Person id="23787">
+            <Name>
+               <FirstName>Danny Joseph</FirstName>
+               <LastName>Vangoidtsenhoven</LastName>
+            </Name>
+            <KnownAs>
+               <FirstName>Danny Joseph</FirstName>
+               <LastName>Vangoidtsenhoven</LastName>
+            </KnownAs>
+            <Gender>M</Gender>
+            <DateOfBirth>19650313</DateOfBirth>
+            <Fraction>Open Vld</Fraction>
+            <Affiliation>Open Vld</Affiliation>
+            <Address>A. GOOSSENSSTRAAT, 23, 3040 Huldenberg</Address>
+            <Results>
+               <Elected>yes</Elected>
+               <Ranking>1</Ranking>
+            </Results>
+            <FunctionAllocations>
+               <FunctionAllocation id="56064">
+                  <Function id="2" displayPriority="4" bevoegdheidOrFunction="FUNCTION">Burgemeester</Function>
+                  <Since>20130111</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+               <FunctionAllocation id="56011">
+                  <Function id="1" displayPriority="1" bevoegdheidOrFunction="FUNCTION">Gemeenteraadslid</Function>
+                  <Since>20130111</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+               <FunctionAllocation id="56065">
+                  <Function id="4" displayPriority="2" bevoegdheidOrFunction="FUNCTION">Voorzitter gemeenteraad</Function>
+                  <Since>20130111</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+            </FunctionAllocations>
+            <Bevoegdheden>
+               <Bevoegdheid id="65">Algemeen beleid</Bevoegdheid>
+               <Bevoegdheid id="120">Veiligheid</Bevoegdheid>
+               <Bevoegdheid id="70">Communicatie</Bevoegdheid>
+               <Bevoegdheid id="109">Politie</Bevoegdheid>
+               <Bevoegdheid id="114">Ruimtelijke ordening</Bevoegdheid>
+               <Bevoegdheid id="543">Bevolking</Bevoegdheid>
+               <Bevoegdheid id="108">Personeel</Bevoegdheid>
+            </Bevoegdheden>
+         </Person>
+         <Person id="23808">
+            <Name>
+               <FirstName>Sonia Isabelle</FirstName>
+               <LastName>Van Laere</LastName>
+            </Name>
+            <KnownAs>
+               <FirstName>Sonia Isabelle</FirstName>
+               <LastName>Van Laere</LastName>
+            </KnownAs>
+            <Gender>F</Gender>
+            <DateOfBirth>19630921</DateOfBirth>
+            <Fraction>N-VA</Fraction>
+            <Affiliation>N-VA</Affiliation>
+            <Address>WOLFSHAEGEN(NEE), 180, 3040 Huldenberg</Address>
+            <Results>
+               <Elected>yes</Elected>
+               <Ranking>1</Ranking>
+            </Results>
+            <FunctionAllocations>
+               <FunctionAllocation id="56012">
+                  <Function id="1" displayPriority="1" bevoegdheidOrFunction="FUNCTION">Gemeenteraadslid</Function>
+                  <Since>20130111</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+            </FunctionAllocations>
+         </Person>
+         <Person id="23814">
+            <Name>
+               <FirstName>Petrus Josephus</FirstName>
+               <LastName>Trappeniers</LastName>
+            </Name>
+            <KnownAs>
+               <FirstName>Petrus Josephus</FirstName>
+               <LastName>Trappeniers</LastName>
+            </KnownAs>
+            <Gender>M</Gender>
+            <DateOfBirth>19470120</DateOfBirth>
+            <Fraction>N-VA</Fraction>
+            <Affiliation>N-VA</Affiliation>
+            <Address>VRANKSBERG(LOO), 20, 3040 Huldenberg</Address>
+            <Results>
+               <Elected>yes</Elected>
+               <Ranking>2</Ranking>
+            </Results>
+            <FunctionAllocations>
+               <FunctionAllocation id="56015">
+                  <Function id="1" displayPriority="1" bevoegdheidOrFunction="FUNCTION">Gemeenteraadslid</Function>
+                  <Since>20130111</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+            </FunctionAllocations>
+         </Person>
+         <Person id="23870">
+            <Name>
+               <FirstName>Veronique Irene</FirstName>
+               <LastName>Nijs</LastName>
+            </Name>
+            <KnownAs>
+               <FirstName>Veronique Irene</FirstName>
+               <LastName>Nijs</LastName>
+            </KnownAs>
+            <Gender>F</Gender>
+            <DateOfBirth>19750904</DateOfBirth>
+            <Fraction>CD&amp;V</Fraction>
+            <Affiliation>CD&amp;V</Affiliation>
+            <Address>RADARWEG(SAR), 18, 3040 Huldenberg</Address>
+            <Results>
+               <Elected>yes</Elected>
+               <Ranking>6</Ranking>
+            </Results>
+            <FunctionAllocations>
+               <FunctionAllocation id="56017">
+                  <Function id="1" displayPriority="1" bevoegdheidOrFunction="FUNCTION">Gemeenteraadslid</Function>
+                  <Since>20130111</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+            </FunctionAllocations>
+         </Person>
+         <Person id="23881">
+            <Name>
+               <FirstName>Yves Paul</FirstName>
+               <LastName>Verheyden</LastName>
+            </Name>
+            <KnownAs>
+               <FirstName>Yves Paul</FirstName>
+               <LastName>Verheyden</LastName>
+            </KnownAs>
+            <Gender>M</Gender>
+            <DateOfBirth>19690117</DateOfBirth>
+            <Fraction>CD&amp;V</Fraction>
+            <Affiliation>CD&amp;V</Affiliation>
+            <Address>ZESDAGMAALSTRAAT(SAR), 19, 3040 Huldenberg</Address>
+            <Results>
+               <Elected>yes</Elected>
+               <Ranking>4</Ranking>
+            </Results>
+            <FunctionAllocations>
+               <FunctionAllocation id="56018">
+                  <Function id="1" displayPriority="1" bevoegdheidOrFunction="FUNCTION">Gemeenteraadslid</Function>
+                  <Since>20130111</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+            </FunctionAllocations>
+         </Person>
+         <Person id="23799">
+            <Name>
+               <FirstName>Joseph Victor</FirstName>
+               <LastName>Detienne</LastName>
+            </Name>
+            <KnownAs>
+               <FirstName>Joseph Victor</FirstName>
+               <LastName>Detienne</LastName>
+            </KnownAs>
+            <Gender>M</Gender>
+            <DateOfBirth>19460928</DateOfBirth>
+            <Fraction>Open Vld</Fraction>
+            <Affiliation>Open Vld</Affiliation>
+            <Address>PASTORIJSTRAAT(OTT), 4, 3040 Huldenberg</Address>
+            <Results>
+               <Elected>yes</Elected>
+               <Ranking>7</Ranking>
+            </Results>
+            <FunctionAllocations>
+               <FunctionAllocation id="56010">
+                  <Function id="1" displayPriority="1" bevoegdheidOrFunction="FUNCTION">Gemeenteraadslid</Function>
+                  <Since>20130111</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+            </FunctionAllocations>
+         </Person>
+         <Person id="23789">
+            <Name>
+               <FirstName>Nicole Viviane</FirstName>
+               <LastName>Vanweddingen</LastName>
+            </Name>
+            <KnownAs>
+               <FirstName>Nicole Viviane</FirstName>
+               <LastName>Vanweddingen</LastName>
+            </KnownAs>
+            <Gender>F</Gender>
+            <DateOfBirth>19500716</DateOfBirth>
+            <Fraction>Open Vld</Fraction>
+            <Affiliation>Open Vld</Affiliation>
+            <Address>TERLAENENSTRAAT(OTT), 32, 3040 Huldenberg</Address>
+            <Results>
+               <Elected>yes</Elected>
+               <Ranking>4</Ranking>
+            </Results>
+            <FunctionAllocations>
+               <FunctionAllocation id="119149">
+                  <Function id="3" displayPriority="3" bevoegdheidOrFunction="FUNCTION">Schepen</Function>
+                  <Since>20131104</Since>
+                  <StartDate>20131024</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+               <FunctionAllocation id="56024">
+                  <Function id="1" displayPriority="1" bevoegdheidOrFunction="FUNCTION">Gemeenteraadslid</Function>
+                  <Since>20130111</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+            </FunctionAllocations>
+            <Bevoegdheden>
+               <Bevoegdheid id="64">Afvalbeleid</Bevoegdheid>
+               <Bevoegdheid id="123">Gezondheid</Bevoegdheid>
+               <Bevoegdheid id="96">Leefmilieu</Bevoegdheid>
+               <Bevoegdheid id="119">Toerisme</Bevoegdheid>
+               <Bevoegdheid id="66">Begraafplaatsen</Bevoegdheid>
+               <Bevoegdheid id="95">Landbouw</Bevoegdheid>
+            </Bevoegdheden>
+         </Person>
+         <Person id="23810">
+            <Name>
+               <FirstName>Wim Marie</FirstName>
+               <LastName>Steeno</LastName>
+            </Name>
+            <KnownAs>
+               <FirstName>Wim Marie</FirstName>
+               <LastName>Steeno</LastName>
+            </KnownAs>
+            <Gender>M</Gender>
+            <DateOfBirth>19680828</DateOfBirth>
+            <Fraction>N-VA</Fraction>
+            <Affiliation>N-VA</Affiliation>
+            <Address>FLORIVALSTRAAT(OTT), 11/A000, 3040 Huldenberg</Address>
+            <Results>
+               <Elected>yes</Elected>
+               <Ranking>3</Ranking>
+            </Results>
+            <FunctionAllocations>
+               <FunctionAllocation id="56019">
+                  <Function id="1" displayPriority="1" bevoegdheidOrFunction="FUNCTION">Gemeenteraadslid</Function>
+                  <Since>20130111</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+            </FunctionAllocations>
+         </Person>
+         <Person id="23792">
+            <Name>
+               <FirstName>Philippe Jean</FirstName>
+               <LastName>Vervoort</LastName>
+            </Name>
+            <KnownAs>
+               <FirstName>Philippe Jean</FirstName>
+               <LastName>Vervoort</LastName>
+            </KnownAs>
+            <Gender>M</Gender>
+            <DateOfBirth>19630301</DateOfBirth>
+            <Fraction>Open Vld</Fraction>
+            <Affiliation>Open Vld</Affiliation>
+            <Address>LOONBEEKSTRAAT(NEE), 50, 3040 Huldenberg</Address>
+            <Results>
+               <Elected>yes</Elected>
+               <Ranking>3</Ranking>
+            </Results>
+            <FunctionAllocations>
+               <FunctionAllocation id="56007">
+                  <Function id="1" displayPriority="1" bevoegdheidOrFunction="FUNCTION">Gemeenteraadslid</Function>
+                  <Since>20130111</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+               <FunctionAllocation id="56063">
+                  <Function id="3" displayPriority="3" bevoegdheidOrFunction="FUNCTION">Schepen</Function>
+                  <Since>20130111</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+            </FunctionAllocations>
+            <Bevoegdheden>
+               <Bevoegdheid id="463">Sport</Bevoegdheid>
+               <Bevoegdheid id="89">Jeugd</Bevoegdheid>
+               <Bevoegdheid id="79">Financiën</Bevoegdheid>
+               <Bevoegdheid id="98">Middenstand, lokale economie</Bevoegdheid>
+            </Bevoegdheden>
+         </Person>
+         <Person id="23818">
+            <Name>
+               <FirstName>Nele Lucien</FirstName>
+               <LastName>De Martelaere</LastName>
+            </Name>
+            <KnownAs>
+               <FirstName>Nele Lucien</FirstName>
+               <LastName>De Martelaere</LastName>
+            </KnownAs>
+            <Gender>F</Gender>
+            <DateOfBirth>19870612</DateOfBirth>
+            <Fraction>N-VA</Fraction>
+            <Affiliation>N-VA</Affiliation>
+            <Address>VIJVERSTRAAT(SAR), 26/A, 3040 Huldenberg</Address>
+            <Results>
+               <Elected>yes</Elected>
+               <Ranking>4</Ranking>
+            </Results>
+            <FunctionAllocations>
+               <FunctionAllocation id="56008">
+                  <Function id="1" displayPriority="1" bevoegdheidOrFunction="FUNCTION">Gemeenteraadslid</Function>
+                  <Since>20130111</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+            </FunctionAllocations>
+         </Person>
+         <Person id="23876">
+            <Name>
+               <FirstName>Walter Julien</FirstName>
+               <LastName>Craps</LastName>
+            </Name>
+            <KnownAs>
+               <FirstName>Walter Julien</FirstName>
+               <LastName>Craps</LastName>
+            </KnownAs>
+            <Gender>M</Gender>
+            <DateOfBirth>19551215</DateOfBirth>
+            <Fraction>CD&amp;V</Fraction>
+            <Affiliation>CD&amp;V</Affiliation>
+            <Address>R. BORREMANSSTRAAT, 22, 3040 Huldenberg</Address>
+            <Results>
+               <Elected>yes</Elected>
+               <Ranking>2</Ranking>
+            </Results>
+            <FunctionAllocations>
+               <FunctionAllocation id="56026">
+                  <Function id="1" displayPriority="1" bevoegdheidOrFunction="FUNCTION">Gemeenteraadslid</Function>
+                  <Since>20130111</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+               <FunctionAllocation id="56069">
+                  <Function id="3" displayPriority="3" bevoegdheidOrFunction="FUNCTION">Schepen</Function>
+                  <Since>20130111</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+            </FunctionAllocations>
+            <Bevoegdheden>
+               <Bevoegdheid id="105">Openbare Werken</Bevoegdheid>
+               <Bevoegdheid id="100">Mobiliteit</Bevoegdheid>
+            </Bevoegdheden>
+         </Person>
+         <Person id="23866">
+            <Name>
+               <FirstName>Nelly Leone</FirstName>
+               <LastName>Vanderlinden</LastName>
+            </Name>
+            <KnownAs>
+               <FirstName>Nelly Leone</FirstName>
+               <LastName>Vanderlinden</LastName>
+            </KnownAs>
+            <Gender>F</Gender>
+            <DateOfBirth>19400318</DateOfBirth>
+            <Fraction>CD&amp;V</Fraction>
+            <Affiliation>CD&amp;V</Affiliation>
+            <Address>HOLLESTRAAT(LOO), 31, 3040 Huldenberg</Address>
+            <Results>
+               <Elected>yes</Elected>
+               <Ranking>5</Ranking>
+            </Results>
+            <FunctionAllocations>
+               <FunctionAllocation id="56025">
+                  <Function id="1" displayPriority="1" bevoegdheidOrFunction="FUNCTION">Gemeenteraadslid</Function>
+                  <Since>20130111</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+            </FunctionAllocations>
+         </Person>
+         <Person id="23798">
+            <Name>
+               <FirstName>Kamil Serge</FirstName>
+               <LastName>Muyldermans</LastName>
+            </Name>
+            <KnownAs>
+               <FirstName>Kamil Serge</FirstName>
+               <LastName>Muyldermans</LastName>
+            </KnownAs>
+            <Gender>M</Gender>
+            <DateOfBirth>19900606</DateOfBirth>
+            <Fraction>Open Vld</Fraction>
+            <Affiliation>Open Vld</Affiliation>
+            <Address>NIJVELSEBAAN, 18, 3040 Huldenberg</Address>
+            <Results>
+               <Elected>yes</Elected>
+               <Ranking>6</Ranking>
+            </Results>
+            <FunctionAllocations>
+               <FunctionAllocation id="56021">
+                  <Function id="1" displayPriority="1" bevoegdheidOrFunction="FUNCTION">Gemeenteraadslid</Function>
+                  <Since>20130111</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+            </FunctionAllocations>
+         </Person>
+         <Person id="23847">
+            <Name>
+               <FirstName>Hugo Jean</FirstName>
+               <LastName>Magnus</LastName>
+            </Name>
+            <KnownAs>
+               <FirstName>Hugo Jean</FirstName>
+               <LastName>Magnus</LastName>
+            </KnownAs>
+            <Gender>M</Gender>
+            <DateOfBirth>19460819</DateOfBirth>
+            <Fraction>Groen</Fraction>
+            <Affiliation>Groen</Affiliation>
+            <Address>NIJVELSEBAAN(NEE), 119, 3040 Huldenberg</Address>
+            <Results>
+               <Elected>yes</Elected>
+               <Ranking>1</Ranking>
+            </Results>
+            <FunctionAllocations>
+               <FunctionAllocation id="56020">
+                  <Function id="1" displayPriority="1" bevoegdheidOrFunction="FUNCTION">Gemeenteraadslid</Function>
+                  <Since>20130111</Since>
+                  <StartDate>20130101</StartDate>
+                  <EndDate>20181231</EndDate>
+               </FunctionAllocation>
+            </FunctionAllocations>
+         </Person>
+      </Persons>
+   </Council>
+</AllocationHistory>
