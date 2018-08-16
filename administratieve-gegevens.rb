@@ -33,7 +33,7 @@ def create_contactpoint(info)
   graph = RDF::Graph.new
   id = SecureRandom.uuid
   subject = RDF::URI(BASE_URI % {type: "contactpunt", id: id })
-  graph << RDF.Statement(subject, RDF.type, SCHEMA.ContactPoint)
+  graph << RDF.Statement(subject, RDF.type, SCHEMA.PostalAddress)
   graph << RDF.Statement(subject, MU.uuid, id)
   property_map = {
     country: SCHEMA.addressCountry,
